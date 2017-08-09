@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8929A76A1F3A4D5800730221 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 8929A7691F3A4D5800730221 /* main.c */; };
+		89D4584F1F3A509700921FBD /* libreadline.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D4584E1F3A509700921FBD /* libreadline.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		8929A7661F3A4D5800730221 /* UserInputChallenge */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = UserInputChallenge; sourceTree = BUILT_PRODUCTS_DIR; };
 		8929A7691F3A4D5800730221 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		89D4584E1F3A509700921FBD /* libreadline.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libreadline.tbd; path = usr/lib/libreadline.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89D4584F1F3A509700921FBD /* libreadline.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +46,7 @@
 			children = (
 				8929A7681F3A4D5800730221 /* UserInputChallenge */,
 				8929A7671F3A4D5800730221 /* Products */,
+				89D4584D1F3A509700921FBD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +64,14 @@
 				8929A7691F3A4D5800730221 /* main.c */,
 			);
 			path = UserInputChallenge;
+			sourceTree = "<group>";
+		};
+		89D4584D1F3A509700921FBD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				89D4584E1F3A509700921FBD /* libreadline.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +263,7 @@
 				8929A76F1F3A4D5800730221 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
