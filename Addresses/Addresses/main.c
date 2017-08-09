@@ -6,10 +6,13 @@
 //  Copyright © 2017 Jeff Ripke. All rights reserved.
 //
 
-#include <stdio.h>
+#import <stdio.h>
+#import <stdlib.h>
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
-    return 0;
+    int i = 17;
+    // %p is used for memory address and & next to the variable to get the value of the
+    // memory address
+    printf("i stores its value at %p\n", &i);
+    return EXIT_SUCCESS;
 }
