@@ -10,9 +10,12 @@
 #import <stdlib.h>
 
 int main(int argc, const char * argv[]) {
-    int i = 17;
     // %p is used for memory address and & next to the variable to get the value of the
     // memory address
-    printf("i stores its value at %p\n", &i);
+    int i = 17;
+    int *addressOfI = &i;
+    printf("i stores its value at %p\n", addressOfI);
+    printf("i stores its value at %p\n", main);
+    printf("the int stored at addressOfI is %d\n", *addressOfI);
     return EXIT_SUCCESS;
 }
