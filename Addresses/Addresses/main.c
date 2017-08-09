@@ -15,7 +15,11 @@ int main(int argc, const char * argv[]) {
     int i = 17;
     int *addressOfI = &i;
     printf("i stores its value at %p\n", addressOfI);
-    printf("i stores its value at %p\n", main);
-    printf("the int stored at addressOfI is %d\n", *addressOfI);
+    *addressOfI = 92;
+    printf("Now i is %d\n", i);
+    printf("An int is %zu bytes\n", sizeof(i));
+    // if your pointer is 4 bytes long, your program is running in 32-bit mode
+    // if your pointer is 8 bytes long, your program is running in 64-bit mode
+    printf("A pointer is %zu bytes\n", sizeof(addressOfI));
     return EXIT_SUCCESS;
 }
