@@ -15,13 +15,14 @@ void metersToFeetAndInches(double meters, unsigned int *feetPointer, double *inc
     
     // convert the number of meters into a floating-point number of feet
     double rawFeet = meters * 3.281;
+    double feet = 0;
     
     // How many complete feet as an unsigned int?
-    unsigned int feet = (unsigned int)floor(rawFeet);
+    double fractionPart = modf(rawFeet, &feet);
     
     // Store the number of feet at the supplied address
     if (feetPointer) {
-        printf("Storing %u to the address %p.\n", feet, feetPointer);
+        printf("Storing %u to the address %p.\n", (unsigned int)feet, feetPointer);
         *feetPointer = feet;
     }
     
