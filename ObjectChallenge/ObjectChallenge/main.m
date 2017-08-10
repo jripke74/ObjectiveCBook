@@ -10,7 +10,9 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        
+        NSHost *host = [NSHost currentHost];
+        NSString *hostName = [host localizedName];
+        NSLog(@"This computers name is %@.", hostName);
     }
     return EXIT_SUCCESS;
 }
