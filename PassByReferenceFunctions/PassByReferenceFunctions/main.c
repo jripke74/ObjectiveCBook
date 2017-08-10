@@ -38,6 +38,6 @@ int main(int argc, const char * argv[]) {
     double inches;
     
     metersToFeetAndInches(meters, &feet, &inches);
-    printf("%.1f meters is equal to %d feet and %.1f inches.", meters, feet, inches);
+    printf("%.1f meters is equal to %d feet and %.1f inches.\n", meters, feet, inches);
     return EXIT_SUCCESS;
 }
