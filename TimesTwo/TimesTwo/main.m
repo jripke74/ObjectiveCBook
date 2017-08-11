@@ -10,7 +10,8 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        NSDate *currentTime = nil;
+        //NSDate *currentTime = nil; // even though this is nil it still creates a heap
+        NSDate *currentTime = [NSDate date];
         NSLog(@"currentTime's value is %p", currentTime);
     }
     return EXIT_SUCCESS;
