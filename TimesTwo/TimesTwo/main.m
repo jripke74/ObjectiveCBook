@@ -13,6 +13,14 @@ int main(int argc, const char * argv[]) {
         //NSDate *currentTime = nil; // even though this is nil it still creates a heap
         NSDate *currentTime = [NSDate date];
         NSLog(@"currentTime's value is %p", currentTime);
+        
+        NSDate *startTime = currentTime;
+        
+        sleep(2);
+        
+        currentTime = [NSDate date];
+        NSLog(@"currentTime's value is now %p", currentTime);
+        NSLog(@"The address of the original object is %p", startTime);
     }
     return EXIT_SUCCESS;
 }
