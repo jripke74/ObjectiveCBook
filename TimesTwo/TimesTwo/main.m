@@ -10,7 +10,8 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        
+        NSDate *currentTime = nil;
+        NSLog(@"currentTime's value is %p", currentTime);
     }
     return EXIT_SUCCESS;
 }
