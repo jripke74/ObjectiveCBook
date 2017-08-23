@@ -27,7 +27,11 @@
 }
 
 - (float)bodyMassIndex {
-    return _weightInKilos / (_heightInMeters * _heightInMeters);
+    // accessing instance variables directly
+    // return _weightInKilos / (_heightInMeters * _heightInMeters);
+    // Use accessor methods instead of accessing instance variables directly
+    float h = [self heightInMeters];
+    return [self weightInKilos] / (h * h);
 }
 
 @end

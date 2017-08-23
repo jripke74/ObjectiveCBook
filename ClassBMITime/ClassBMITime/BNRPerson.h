@@ -18,9 +18,13 @@
 }
 
 // BNPerson has methods to read and set its instance variables
+
+// Getter method declarations
 - (float)heightInMeters;
-- (void)setHeightInMeters:(float)h;
 - (int)weightInKilos;
+
+// Setter method declarations
+- (void)setHeightInMeters:(float)h;
 - (void)setWeightInKilos:(int)w;
 
 // BNPerson has a method that calculates the Body Mass Index
