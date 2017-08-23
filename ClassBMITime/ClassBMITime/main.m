@@ -12,5 +12,5 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
     }
-    return EXIT_SUCCESS
+    return EXIT_SUCCESS;
 }
