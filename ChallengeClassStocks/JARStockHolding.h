@@ -18,11 +18,18 @@
 }
 
 // Getter method declarations
-- (float)costInDollars;
-- (float)valueInDollars;
+- (float)purchaseSharePrice;
+- (float)currentSharePrice;
+- (int)numberOfShares;
 
 // Setter method declarations
-- (void)setCostInDollars:(float)d;
-- (void)setValueInDollars:(float)v;
+- (void)setPurchaseSharePrice:(float)purchasePrice;
+- (void)setCurrentSharePrice:(float)currentPrice;
+- (void)setNumberOfShares:(int)numberShares;
 
+// JARStockHolding has two methods that calculate cost and value of stock
+// What did we/you pay for the stock
+- (float)costInDollars;
+// What is the current value
+- (float)valueInDollars;
 @end

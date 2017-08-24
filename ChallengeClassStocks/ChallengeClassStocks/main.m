@@ -7,9 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "JARStockHolding.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
+        
+        // Create an instance of JARStockHolding
+        JARStockHolding *stockOne = [[JARStockHolding alloc] init];
+        JARStockHolding *stockTwo = [[JARStockHolding alloc] init];
+        JARStockHolding *stockThree = [[JARStockHolding alloc] init];
+        
+        // Give the instance variables values using setters
+        
         
     }
     return EXIT_SUCCESS;

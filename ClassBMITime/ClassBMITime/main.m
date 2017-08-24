@@ -12,7 +12,7 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        // Create an instance fo BNRPerson
+        // Create an instance of CBTPerson
         CBTPerson *mikey = [[CBTPerson alloc] init];
         
         // Give the instance variables interesting values using setters
