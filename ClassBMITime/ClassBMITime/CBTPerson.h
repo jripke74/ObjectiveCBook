@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface BNRPerson : NSObject
+@interface CBTPerson : NSObject
 
 
 {

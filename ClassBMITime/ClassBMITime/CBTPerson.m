@@ -6,9 +6,9 @@
 //  Copyright © 2017 Jeff Ripke. All rights reserved.
 //
 
-#import "BNRPerson.h"
+#import "CBTPerson.h"
 
-@implementation BNRPerson
+@implementation CBTPerson
 
 - (float)heightInMeters {
     return _heightInMeters;

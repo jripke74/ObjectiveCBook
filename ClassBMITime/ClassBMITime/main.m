@@ -7,13 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BNRPerson.h"
+#import "CBTPerson.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
         // Create an instance fo BNRPerson
-        BNRPerson *mikey = [[BNRPerson alloc] init];
+        CBTPerson *mikey = [[CBTPerson alloc] init];
         
         // Give the instance variables interesting values using setters
         [mikey setWeightInKilos:96];
