@@ -10,14 +10,13 @@
 
 @interface CBTPerson : NSObject
 
-
 {
-    // BNPerson has two instance variables
+    // CBTPerson has two instance variables
     float _heightInMeters;
     int _weightInKilos;
 }
 
-// BNPerson has methods to read and set its instance variables
+// CBTPerson has methods to read and set its instance variables
 
 // Getter method declarations
 - (float)heightInMeters;
@@ -27,7 +26,7 @@
 - (void)setHeightInMeters:(float)h;
 - (void)setWeightInKilos:(int)w;
 
-// BNPerson has a method that calculates the Body Mass Index
+// CBTPerson has a method that calculates the Body Mass Index
 - (float)bodyMassIndex;
 
 @end

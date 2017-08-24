@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		894708411F4EBB2500285C95 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 894708401F4EBB2500285C95 /* main.m */; };
+		894708491F4EBBFC00285C95 /* JARStockHolding.m in Sources */ = {isa = PBXBuildFile; fileRef = 894708481F4EBBFC00285C95 /* JARStockHolding.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		8947083D1F4EBB2500285C95 /* ChallengeClassStocks */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ChallengeClassStocks; sourceTree = BUILT_PRODUCTS_DIR; };
 		894708401F4EBB2500285C95 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		894708471F4EBBFC00285C95 /* JARStockHolding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JARStockHolding.h; path = ../JARStockHolding.h; sourceTree = "<group>"; };
+		894708481F4EBBFC00285C95 /* JARStockHolding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JARStockHolding.m; path = ../JARStockHolding.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				894708401F4EBB2500285C95 /* main.m */,
+				894708471F4EBBFC00285C95 /* JARStockHolding.h */,
+				894708481F4EBBFC00285C95 /* JARStockHolding.m */,
 			);
 			path = ChallengeClassStocks;
 			sourceTree = "<group>";
@@ -120,6 +125,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				894708491F4EBBFC00285C95 /* JARStockHolding.m in Sources */,
 				894708411F4EBB2500285C95 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
