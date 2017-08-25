@@ -10,21 +10,22 @@
 
 @implementation CBTPerson
 
-- (float)heightInMeters {
-    return _heightInMeters;
-}
-
-- (void)setHeightInMeters:(float)h {
-    _heightInMeters = h;
-}
-
-- (int)weightInKilos {
-    return _weightInKilos;
-}
-
-- (void)setWeightInKilos:(int)w {
-    _weightInKilos = w;
-}
+// No longer need accessor implementations when you use properties
+//- (float)heightInMeters {
+//    return _heightInMeters;
+//}
+//
+//- (void)setHeightInMeters:(float)h {
+//    _heightInMeters = h;
+//}
+//
+//- (int)weightInKilos {
+//    return _weightInKilos;
+//}
+//
+//- (void)setWeightInKilos:(int)w {
+//    _weightInKilos = w;
+//}
 
 - (float)bodyMassIndex {
     // accessing instance variables directly
