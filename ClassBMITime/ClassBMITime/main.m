@@ -7,13 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CBTPerson.h"
+// comment out because CBTEmployee inherits from CBTPerson
+//#import "CBTPerson.h"
+#import "CBTEmployee.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        // Create an instance of CBTPerson
-        CBTPerson *mikey = [[CBTPerson alloc] init];
+        // Create an instance of CBTEmployee
+        CBTPerson *mikey = [[CBTEmployee alloc] init];
         
         // Give the instance variables interesting values using setters
 //        [mikey setWeightInKilos:96];
