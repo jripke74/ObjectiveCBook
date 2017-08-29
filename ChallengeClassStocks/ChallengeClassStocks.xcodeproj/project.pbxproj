@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		894708411F4EBB2500285C95 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 894708401F4EBB2500285C95 /* main.m */; };
 		894708491F4EBBFC00285C95 /* JARStockHolding.m in Sources */ = {isa = PBXBuildFile; fileRef = 894708481F4EBBFC00285C95 /* JARStockHolding.m */; };
+		898C4C7D1F55EC4F004E391E /* JARForeignStockHolding.m in Sources */ = {isa = PBXBuildFile; fileRef = 898C4C7C1F55EC4F004E391E /* JARForeignStockHolding.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		894708401F4EBB2500285C95 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		894708471F4EBBFC00285C95 /* JARStockHolding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JARStockHolding.h; path = ../JARStockHolding.h; sourceTree = "<group>"; };
 		894708481F4EBBFC00285C95 /* JARStockHolding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JARStockHolding.m; path = ../JARStockHolding.m; sourceTree = "<group>"; };
+		898C4C7B1F55EC4F004E391E /* JARForeignStockHolding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JARForeignStockHolding.h; sourceTree = "<group>"; };
+		898C4C7C1F55EC4F004E391E /* JARForeignStockHolding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JARForeignStockHolding.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 				894708401F4EBB2500285C95 /* main.m */,
 				894708471F4EBBFC00285C95 /* JARStockHolding.h */,
 				894708481F4EBBFC00285C95 /* JARStockHolding.m */,
+				898C4C7B1F55EC4F004E391E /* JARForeignStockHolding.h */,
+				898C4C7C1F55EC4F004E391E /* JARForeignStockHolding.m */,
 			);
 			path = ChallengeClassStocks;
 			sourceTree = "<group>";
@@ -127,6 +132,7 @@
 			files = (
 				894708491F4EBBFC00285C95 /* JARStockHolding.m in Sources */,
 				894708411F4EBB2500285C95 /* main.m in Sources */,
+				898C4C7D1F55EC4F004E391E /* JARForeignStockHolding.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +263,7 @@
 				894708461F4EBB2500285C95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

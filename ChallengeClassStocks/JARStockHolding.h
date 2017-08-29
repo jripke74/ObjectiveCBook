@@ -32,4 +32,5 @@
 - (float)costInDollars;
 // What is the current value
 - (float)valueInDollars;
+
 @end
