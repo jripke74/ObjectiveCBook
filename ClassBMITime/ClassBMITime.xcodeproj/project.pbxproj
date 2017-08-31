@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89DF374F1F587BCE002A5963 /* CBTAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 89DF374E1F587BCE002A5963 /* CBTAsset.m */; };
 		89E3508B1F50B577002E671D /* CBTEmployee.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E3508A1F50B577002E671D /* CBTEmployee.m */; };
 		89FA38991F4E09D5008F703C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FA38981F4E09D5008F703C /* main.m */; };
 		89FA38A11F4E0B73008F703C /* CBTPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FA38A01F4E0B73008F703C /* CBTPerson.m */; };
@@ -25,6 +26,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		89DF374D1F587BCE002A5963 /* CBTAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBTAsset.h; sourceTree = "<group>"; };
+		89DF374E1F587BCE002A5963 /* CBTAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBTAsset.m; sourceTree = "<group>"; };
 		89E350891F50B577002E671D /* CBTEmployee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBTEmployee.h; sourceTree = "<group>"; };
 		89E3508A1F50B577002E671D /* CBTEmployee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBTEmployee.m; sourceTree = "<group>"; };
 		89FA38951F4E09D5008F703C /* ClassBMITime */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ClassBMITime; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +71,8 @@
 				89FA38A01F4E0B73008F703C /* CBTPerson.m */,
 				89E350891F50B577002E671D /* CBTEmployee.h */,
 				89E3508A1F50B577002E671D /* CBTEmployee.m */,
+				89DF374D1F587BCE002A5963 /* CBTAsset.h */,
+				89DF374E1F587BCE002A5963 /* CBTAsset.m */,
 			);
 			path = ClassBMITime;
 			sourceTree = "<group>";
@@ -132,6 +137,7 @@
 			files = (
 				89FA38991F4E09D5008F703C /* main.m in Sources */,
 				89FA38A11F4E0B73008F703C /* CBTPerson.m in Sources */,
+				89DF374F1F587BCE002A5963 /* CBTAsset.m in Sources */,
 				89E3508B1F50B577002E671D /* CBTEmployee.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
