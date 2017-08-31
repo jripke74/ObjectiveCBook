@@ -11,6 +11,6 @@
 @interface CBTAsset : NSObject
 
 @property (nonatomic, copy) NSString *label;
-@property (nonatomic) unsigned int resetleValue;
+@property (nonatomic) unsigned int resaleValue;
 
 @end

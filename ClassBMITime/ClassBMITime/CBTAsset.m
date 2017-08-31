@@ -10,4 +10,12 @@
 
 @implementation CBTAsset
 
+- (NSString *)description {
+    return [NSString stringWithFormat:@"<%@: $%u>", self.label, self.resaleValue];
+}
+
+- (void)dealloc {
+    NSLog(@"deallocation %@", self);
+}
+
 @end
