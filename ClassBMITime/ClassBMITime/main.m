@@ -7,38 +7,57 @@
 //
 
 #import <Foundation/Foundation.h>
-// comment out because CBTEmployee inherits from CBTPerson
-//#import "CBTPerson.h"
 #import "CBTEmployee.h"
+#import "CBTAsset.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        // Create an instance of CBTEmployee
-        CBTEmployee *mikey = [[CBTEmployee alloc] init];
+        // Create an array of CBTEmployee objects
+        NSMutableArray *emplyees = [[NSMutableArray alloc] init];
         
-        // Give the instance variables interesting values using setters
-//        [mikey setWeightInKilos:96];
-//        [mikey setHeightInMeters:1.8];
-        mikey.weightInKilos = 96;
-        mikey.heightInMeters = 1.8;
-        mikey.employeeID = 12;
-        mikey.hireDate = [NSDate dateWithNaturalLanguageString:@"Aug 2nd, 2010"];
+        for (int i = 0; i < 10; i++) {
+            // Create an instance of CBTEmployee
+            CBTEmployee *mikey = [[CBTEmployee alloc] init];
+            
+            // Give the instance variables interesting values
+            mikey.weightInKilos = 90 + i;
+            mikey.heightInMeters = 1.8 / i/10.0;
+            mikey.employeeID = i;
+            
+            // Put the employees in the employees array
+            [emplyees addObject:mikey];
+        }
         
-        // Log the instance variables using the getters
-//        float height = [mikey heightInMeters];
-//        int weight = [mikey weightInKilos];
-        float height = mikey.heightInMeters;
-        int weight = mikey.weightInKilos;
-        NSLog(@"mikey is %.2f meters tall and weighs %d kilograms", height, weight);
-        NSDate *date = mikey.hireDate;
-        NSLog(@"%@ hired on %@", mikey, date);
+        // Create 10 assets
+        for (int i = 0; i < 10; i++) {
+            // Create an asset
+            CBTAsset *asset = [[CBTAsset alloc] init];
+            
+            // Give it an interesting label
+            NSString *currentLabel = [NSString stringWithFormat:@"Laptop %d", i];
+            asset.label = currentLabel;
+            asset.resaleValue = 350 + i * 17;
+            
+            // Get a random number between 0 and 9 inclusive
+            NSUInteger randomIndex = random() % [emplyees count];
+            
+            // Find that employee
+            CBTEmployee *randomEmplyee = [emplyees objectAtIndex:randomIndex];
+            
+            // Assign the asset to the employee
+            [randomEmplyee addAssets:asset];
+        }
         
-        // Log some values using custom methods
-        float bmi = [mikey bodyMassIndex];
-        double years = [mikey yearsOfEmployment];
-        NSLog(@"BMI of %.2f, has worked with us for %.2f years", bmi, years);
+        NSLog(@"Employees: %@", emplyees);
+        NSLog(@"Giving up ownership of one employee");
         
+        [emplyees removeObjectAtIndex:5];
+        
+        NSLog(@"Giving up ownership of arrays");
+        
+        emplyees = nil;
     }
+    
     return EXIT_SUCCESS;
 }
