@@ -17,7 +17,8 @@
 }
 
 @property (nonatomic) unsigned int employeeID;
-@property (nonatomic) unsigned int officeAlarmCode;
+// declared in class extension in CBTEmployee.m
+//@property (nonatomic) unsigned int officeAlarmCode;
 @property (nonatomic) NSDate *hireDate;
 @property (nonatomic, copy) NSArray *assets;
 

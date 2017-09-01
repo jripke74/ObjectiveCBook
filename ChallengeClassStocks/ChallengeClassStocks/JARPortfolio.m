@@ -7,7 +7,32 @@
 //
 
 #import "JARPortfolio.h"
+#import "JARStockHolding.h"
+#import "JARForeignStockHolding.h"
 
 @implementation JARPortfolio
+
+- (void)setHoldings:(NSArray *)h {
+    _holdings = [h mutableCopy];
+}
+
+- (NSArray *)holdings {
+    return [_holdings copy];
+}
+
+- (void)addStock:(JARStockHolding *)stock {
+    if (_holdings == nil) {
+        _holdings = [[NSMutableArray alloc] init];
+    }
+    [_holdings addObject:stock];
+}
+
+- (float)valueOfPorfolio {
+    float sum = 0;
+    for (JARStockHolding *stock in self.holdings) {
+        sum += [stock valueInDollars];
+    }
+    return sum;
+}
 
 @end

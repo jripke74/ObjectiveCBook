@@ -9,6 +9,13 @@
 #import "CBTEmployee.h"
 #import "CBTAsset.h"
 
+// class extension
+@interface CBTEmployee ()
+
+@property (nonatomic) unsigned int officeAlarmCode;
+
+@end
+
 @implementation CBTEmployee
 
 // Accessors for assets properties

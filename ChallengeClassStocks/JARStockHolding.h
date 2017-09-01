@@ -10,27 +10,13 @@
 
 @interface JARStockHolding : NSObject
 
-{
-    // three instance variables
-    float _purchaseSharePrice;
-    float _currentSharePrice;
-    int _numberOfShares;
-}
+@property (nonatomic) NSString *companyName;
+@property (nonatomic) NSString *symbol;
+@property (nonatomic) float purchaseSharePrice;
+@property (nonatomic) float currentSharePrice;
+@property (nonatomic) int numberOfShares;
 
-// Getter method declarations
-- (float)purchaseSharePrice;
-- (float)currentSharePrice;
-- (int)numberOfShares;
-
-// Setter method declarations
-- (void)setPurchaseSharePrice:(float)purchasePrice;
-- (void)setCurrentSharePrice:(float)currentPrice;
-- (void)setNumberOfShares:(int)numberShares;
-
-// JARStockHolding has two methods that calculate cost and value of stock
-// What did we/you pay for the stock
-- (float)costInDollars;
-// What is the current value
-- (float)valueInDollars;
+- (float)costInDollars; // purchaseSharePrice * numberOfShares
+- (float)valueInDollars; // currentSharePrice * numberOfShares
 
 @end

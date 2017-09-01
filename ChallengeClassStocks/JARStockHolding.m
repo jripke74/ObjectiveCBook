@@ -10,29 +10,7 @@
 
 @implementation JARStockHolding
 
-- (float)purchaseSharePrice {
-    return _purchaseSharePrice;
-}
 
-- (void)setPurchaseSharePrice:(float)purchasePrice {
-    _purchaseSharePrice = purchasePrice;
-}
-
-- (float)currentSharePrice {
-    return _currentSharePrice;
-}
-
-- (void)setCurrentSharePrice:(float)currentPrice {
-    _currentSharePrice = currentPrice;
-}
-
-- (int)numberOfShares {
-    return _numberOfShares;
-}
-
-- (void)setNumberOfShares:(int)numberShares {
-    _numberOfShares = numberShares;
-}
 
 // calculate the total cost of shares when purchased
 - (float)costInDollars {
