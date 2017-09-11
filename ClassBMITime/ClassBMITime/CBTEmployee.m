@@ -12,6 +12,10 @@
 // class extension
 @interface CBTEmployee ()
 
+{
+    NSMutableArray *_assets;
+}
+
 @property (nonatomic) unsigned int officeAlarmCode;
 
 @end

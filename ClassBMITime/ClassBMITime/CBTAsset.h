@@ -7,10 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+@class CBTEmployee;
 
 @interface CBTAsset : NSObject
 
 @property (nonatomic, copy) NSString *label;
+@property (nonatomic) CBTEmployee *holder;
 @property (nonatomic) unsigned int resaleValue;
 
 @end

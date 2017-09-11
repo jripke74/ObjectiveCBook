@@ -12,9 +12,10 @@
 
 @interface CBTEmployee : CBTPerson
 
-{
-    NSMutableArray *_assets;
-}
+// put in the class extension in CBTemployee.m
+//{
+//    NSMutableArray *_assets;
+//}
 
 @property (nonatomic) unsigned int employeeID;
 // declared in class extension in CBTEmployee.m
