@@ -21,9 +21,9 @@
 // declared in class extension in CBTEmployee.m
 //@property (nonatomic) unsigned int officeAlarmCode;
 @property (nonatomic) NSDate *hireDate;
-@property (nonatomic, copy) NSArray *assets;
+@property (nonatomic, copy) NSSet *assets;
 
-- (double)yearsOfEmployment;
+//- (double)yearsOfEmployment;
 - (void)addAssets:(CBTAsset *)a;
 - (unsigned int)valueOfAssets;
 

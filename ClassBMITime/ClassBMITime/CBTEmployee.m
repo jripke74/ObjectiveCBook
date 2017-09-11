@@ -13,7 +13,7 @@
 @interface CBTEmployee ()
 
 {
-    NSMutableArray *_assets;
+    NSMutableSet *_assets;
 }
 
 @property (nonatomic) unsigned int officeAlarmCode;
@@ -35,7 +35,7 @@
     // Is assets nil?
     if (!_assets) {
         // create the array
-        _assets = [[NSMutableArray alloc] init];
+        _assets = [[NSMutableSet alloc] init];
     }
     [_assets addObject:a];
     a.holder = self;

@@ -14,7 +14,9 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
         // Create an array of CBTEmployee objects
-        NSMutableArray *emplyees = [[NSMutableArray alloc] init];
+        NSMutableArray *employees = [[NSMutableArray alloc] init];
+        NSMutableArray *allAssets = [[NSMutableArray alloc] init];
+        NSMutableDictionary *executives = [[NSMutableDictionary alloc] init];
         
         for (int i = 0; i < 10; i++) {
             // Create an instance of CBTEmployee
@@ -26,7 +28,17 @@ int main(int argc, const char * argv[]) {
             mikey.employeeID = i;
             
             // Put the employees in the employees array
-            [emplyees addObject:mikey];
+            [employees addObject:mikey];
+            
+            // is this the first employee?
+            if (i == 0) {
+                [executives setObject:mikey forKey:@"CEO"];
+            }
+            
+            // Is this the second employee?
+            if (i == 1) {
+                [executives setObject:mikey forKey:@"CTO"];
+            }
         }
         
         // Create 10 assets
@@ -40,23 +52,33 @@ int main(int argc, const char * argv[]) {
             asset.resaleValue = 350 + i * 17;
             
             // Get a random number between 0 and 9 inclusive
-            NSUInteger randomIndex = random() % [emplyees count];
+            NSUInteger randomIndex = random() % [employees count];
             
             // Find that employee
-            CBTEmployee *randomEmplyee = [emplyees objectAtIndex:randomIndex];
+            CBTEmployee *randomEmplyee = [employees objectAtIndex:randomIndex];
             
             // Assign the asset to the employee
             [randomEmplyee addAssets:asset];
+            
+            [allAssets addObject:asset];
         }
         
-        NSLog(@"Employees: %@", emplyees);
+        NSLog(@"Employees: %@", employees);
         NSLog(@"Giving up ownership of one employee");
         
-        [emplyees removeObjectAtIndex:5];
+        [employees removeObjectAtIndex:5];
+        
+        NSLog(@"allAssets: %@", allAssets);
         
         NSLog(@"Giving up ownership of arrays");
         
-        emplyees = nil;
+        NSLog(@"executives: %@", executives);
+        
+        NSLog(@"CEO: %@", executives[@"CEO"]);
+        
+        executives = nil;
+        allAssets = nil;
+        employees = nil;
     }
     
     // wait 100 seconds before exiting
