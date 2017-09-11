@@ -12,7 +12,7 @@
 @interface CBTAsset : NSObject
 
 @property (nonatomic, copy) NSString *label;
-@property (nonatomic) CBTEmployee *holder;
+@property (nonatomic, weak) CBTEmployee *holder;
 @property (nonatomic) unsigned int resaleValue;
 
 @end

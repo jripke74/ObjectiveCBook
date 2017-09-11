@@ -59,5 +59,8 @@ int main(int argc, const char * argv[]) {
         emplyees = nil;
     }
     
+    // wait 100 seconds before exiting
+    sleep(100);
+    
     return EXIT_SUCCESS;
 }
