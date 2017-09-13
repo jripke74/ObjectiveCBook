@@ -63,6 +63,10 @@ int main(int argc, const char * argv[]) {
             [allAssets addObject:asset];
         }
         
+        NSSortDescriptor *voa = [NSSortDescriptor sortDescriptorWithKey:@"valueOfAssets" ascending:YES];
+        NSSortDescriptor *eid = [NSSortDescriptor sortDescriptorWithKey:@"employeeID" ascending:YES];
+        [employees sortUsingDescriptors: @[voa, eid]];
+        
         NSLog(@"Employees: %@", employees);
         NSLog(@"Giving up ownership of one employee");
         
@@ -77,6 +81,14 @@ int main(int argc, const char * argv[]) {
         NSLog(@"CEO: %@", executives[@"CEO"]);
         
         executives = nil;
+        
+        // find all assets that are greater than $70
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"holder.valueOfAssets > 70"];
+        // add all assets > $70 to array
+        NSArray *toBeReclaimed = [allAssets filteredArrayUsingPredicate:predicate];
+        NSLog(@"toBeReclaimed: %@", toBeReclaimed);
+        toBeReclaimed = nil;
+        
         allAssets = nil;
         employees = nil;
     }
