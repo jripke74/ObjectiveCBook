@@ -10,7 +10,26 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
+        NSURL *url = [NSURL URLWithString:@"https://www.google.com/images/logos/ps_logo2.png"];
+        NSURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+        NSError *error = nil;
+        NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:NULL error:nil];
         
+        if (!data) {
+            NSLog(@"fetch failed: %@", [error localizedDescription]);
+            return EXIT_FAILURE;
+        }
+        
+        NSLog(@"The file is %lu bytes", (unsigned long)[data length]);
+        
+        BOOL written = [data writeToFile:@"/tmp/google.png" options: 0 error: &error];
+        
+        if (!written) {
+            NSLog(@"write failed: %@", [error localizedDescription]);
+            return EXIT_FAILURE;
+        }
+        
+        NSLog(@"Success!");
     }
     return EXIT_SUCCESS;
 }
