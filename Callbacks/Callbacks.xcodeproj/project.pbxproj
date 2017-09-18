@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		892579581F7041E2008F0327 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 892579571F7041E2008F0327 /* main.m */; };
+		892579601F704DDF008F0327 /* BNRLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 8925795F1F704DDF008F0327 /* BNRLogger.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		892579541F7041E2008F0327 /* Callbacks */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Callbacks; sourceTree = BUILT_PRODUCTS_DIR; };
 		892579571F7041E2008F0327 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8925795E1F704DDF008F0327 /* BNRLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRLogger.h; sourceTree = "<group>"; };
+		8925795F1F704DDF008F0327 /* BNRLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRLogger.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				892579571F7041E2008F0327 /* main.m */,
+				8925795E1F704DDF008F0327 /* BNRLogger.h */,
+				8925795F1F704DDF008F0327 /* BNRLogger.m */,
 			);
 			path = Callbacks;
 			sourceTree = "<group>";
@@ -120,6 +125,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				892579601F704DDF008F0327 /* BNRLogger.m in Sources */,
 				892579581F7041E2008F0327 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
