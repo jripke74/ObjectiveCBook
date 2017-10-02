@@ -8,8 +8,11 @@
 
 #import "BNRLogger.h"
 
-@implementation BNRLogger
+@interface BNRLogger ()
+- (void)zoneChange:(NSNotification *)note;
+@end
 
+@implementation BNRLogger
 
 - (NSString *)lastTimeString {
     static NSDateFormatter *dateFormatter = nil;
@@ -20,6 +23,10 @@
         NSLog(@"created dateFormatter");
     }
     return [dateFormatter stringFromDate:self.lastTime];
+}
+
+- (void)zoneChange:(NSNotification *)note {
+    NSLog(@"The system time zone has changed!");
 }
 
 - (void)updateLastTime:(NSTimer *)t {
@@ -45,7 +52,7 @@
     _incomingData = nil;
     NSLog(@"string has %lu characters", [string length]);
     // Uncomment the next line to see the entire fetched file
-    //NSLog(@"The whole string is %@", string);
+    // NSLog(@"The whole string is %@", string);
 }
 
 // called if the fetch fails
