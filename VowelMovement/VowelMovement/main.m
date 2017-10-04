@@ -21,10 +21,10 @@ int main(int argc, const char * arg[]) {
         
         // decalare the block variable
         //void (^devowelizer)(id, NSUInteger, BOOL *);
-        ArrayEnumerationBlock devowelizer;
+        //ArrayEnumerationBlock devowelizer;
         
         // Compose a block and assign it to the variable
-        devowelizer = ^(id string, NSUInteger i, BOOL *stop) {
+        [originalStrings enumerateObjectsUsingBlock: ^(id string, NSUInteger i, BOOL *stop) {
             
             NSRange yRange = [string rangeOfString:@"y" options:NSCaseInsensitiveSearch];
             // Did I find a y?
@@ -40,11 +40,11 @@ int main(int argc, const char * arg[]) {
                 [newString replaceOccurrencesOfString:s withString:@"" options:NSCaseInsensitiveSearch range:fullRange];
             }
             [devowelizedStrings addObject:newString];
-        }; // End of block assignment
+        }];
+            NSLog(@"devowelized string: %@", devowelizedStrings);
+        } // End of block assignment
         
         // Iterate over the array with your block
-        [originalStrings enumerateObjectsUsingBlock:devowelizer];
-        NSLog(@"devowelized string: %@", devowelizedStrings);
-    }
+        //[originalStrings enumerateObjectsUsingBlock:devowelizer];
     return EXIT_SUCCESS;
 }
