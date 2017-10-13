@@ -12,7 +12,13 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         NSMutableArray *stocks = [[NSMutableArray alloc] init];
         NSMutableDictionary *stock;
-        
+        NSArray *anArray = @[@"string1", @"string2", @"string3"];
+        NSDictionary *aDictionary = @{@"aFloat": @1.2,
+                                      @"anInteger1": [NSNumber numberWithInt:122],
+                                      @"anInteger2": @65,
+                                      @"aString": @"Hello World",
+                                      @"anArray": @[@"Yellow", @"Red", @"Blue"]
+                                      };
         stock = [NSMutableDictionary dictionary];
         [stock setObject:@"AAPL" forKey:@"symbol"];
         [stock setObject:[NSNumber numberWithInt:200] forKey:@"shares"];
