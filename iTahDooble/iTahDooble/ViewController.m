@@ -16,6 +16,8 @@
 @implementation ViewController
 
 - (void)loadView {
+    self.tasks = [NSMutableArray array];
+    
     CGRect frame = [UIScreen mainScreen].bounds;
     MyView *backgroundView = [[MyView alloc] initWithFrame:frame];
     
@@ -27,6 +29,9 @@
     // Table view
     self.taskTable = [[UITableView alloc] initWithFrame:tableFrame style:UITableViewStylePlain];
     self.taskTable.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    self.taskTable.dataSource = self;
+    
     // Tell table view which class to instantiate
     // whenever it needs to create a new cell
     [self.taskTable registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
@@ -46,17 +51,29 @@
     [backgroundView addSubview:self.insertButton];
     self.view = backgroundView;
 }
+
 - (void)addTask:(id)sender {
     NSString *text = [self.taskField text];
     // quit here if taskField is empty
     if ([text length] == 0) {
         return;
     }
-    // log text to console
-    NSLog(@"Task entered: %@", text);
+    [self.tasks addObject:text];
+    [self.taskTable reloadData];
     // clear out the text field
     [self.taskField setText:@""];
     // dismiss the keyboard
     [self.taskField resignFirstResponder];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [self.tasks count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *c = [self.taskTable dequeueReusableCellWithIdentifier:@"Cell"];
+    NSString *item = [self.tasks objectAtIndex:indexPath.row];
+    c.textLabel.text = item;
+    return c;
 }
 @end
