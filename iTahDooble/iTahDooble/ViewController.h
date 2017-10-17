@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+NSString *DocPath(void);
+
 @interface ViewController : UIViewController <UITableViewDataSource>
 
 @property (nonatomic) UITableView *taskTable;

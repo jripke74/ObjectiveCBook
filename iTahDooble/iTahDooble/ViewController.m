@@ -9,11 +9,20 @@
 #import "ViewController.h"
 #import "MyView.h"
 
+NSString *DocPath() {
+    NSArray *pathList = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    return [pathList[0] stringByAppendingPathComponent:@"data.td"];
+}
+
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
+
+- (void)applicationDidEnterBackground:(UIApplication *)application {
+    [self.tasks writeToFile:DocPath() atomically:YES];
+}
 
 - (void)loadView {
     self.tasks = [NSMutableArray array];
