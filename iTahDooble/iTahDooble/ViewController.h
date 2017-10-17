@@ -10,7 +10,7 @@
 
 NSString *DocPath(void);
 
-@interface ViewController : UIViewController <UITableViewDataSource>
+@interface ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic) UITableView *taskTable;
 @property (nonatomic) UITextField *taskField;

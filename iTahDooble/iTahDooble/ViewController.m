@@ -25,7 +25,13 @@ NSString *DocPath() {
 }
 
 - (void)loadView {
-    self.tasks = [NSMutableArray array];
+    [self.tasks writeToFile:DocPath() atomically:YES];
+    NSArray *plist = [NSArray arrayWithContentsOfFile:DocPath()];
+    if (plist) {
+        self.tasks = [plist mutableCopy];
+    } else {
+        self.tasks = [NSMutableArray array];
+    }
     
     CGRect frame = [UIScreen mainScreen].bounds;
     MyView *backgroundView = [[MyView alloc] initWithFrame:frame];
@@ -40,6 +46,7 @@ NSString *DocPath() {
     self.taskTable.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     self.taskTable.dataSource = self;
+    self.taskTable.delegate = self;
     
     // Tell table view which class to instantiate
     // whenever it needs to create a new cell
