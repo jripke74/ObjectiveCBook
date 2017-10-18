@@ -14,5 +14,6 @@
 @property (nonatomic) IBOutlet NSTableView *taskTable;
 
 - (IBAction)addTasks:(id)sender;
+- (IBAction)deleteTasks:(id)sender;
 
 @end

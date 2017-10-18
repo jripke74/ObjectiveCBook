@@ -30,7 +30,7 @@
                             <rect key="frame" x="1" y="0.0" width="465" height="346"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="hxb-lp-1Gt" viewBased="YES" id="teU-yh-pmp">
+                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" autosaveColumns="NO" headerView="hxb-lp-1Gt" id="teU-yh-pmp">
                                     <rect key="frame" x="0.0" y="0.0" width="465" height="323"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <size key="intercellSpacing" width="3" height="2"/>
@@ -49,30 +49,6 @@
                                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
-                                            <prototypeCellViews>
-                                                <tableCellView id="aUd-Cb-RQq">
-                                                    <rect key="frame" x="1" y="1" width="462" height="17"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                    <subviews>
-                                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="pcd-BH-XzD">
-                                                            <rect key="frame" x="0.0" y="0.0" width="462" height="17"/>
-                                                            <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" title="Table View Cell" id="hGF-r4-7j1">
-                                                                <font key="font" metaFont="system"/>
-                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                            </textFieldCell>
-                                                        </textField>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstItem="pcd-BH-XzD" firstAttribute="centerX" secondItem="aUd-Cb-RQq" secondAttribute="centerX" id="4Ge-bX-PmG"/>
-                                                        <constraint firstItem="pcd-BH-XzD" firstAttribute="leading" secondItem="aUd-Cb-RQq" secondAttribute="leading" constant="2" id="f2g-m5-kd3"/>
-                                                        <constraint firstItem="pcd-BH-XzD" firstAttribute="centerY" secondItem="aUd-Cb-RQq" secondAttribute="centerY" id="nRE-if-5Le"/>
-                                                    </constraints>
-                                                    <connections>
-                                                        <outlet property="textField" destination="pcd-BH-XzD" id="bdx-e2-lul"/>
-                                                    </connections>
-                                                </tableCellView>
-                                            </prototypeCellViews>
                                         </tableColumn>
                                     </tableColumns>
                                     <connections>
@@ -96,6 +72,9 @@
                     </scrollView>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zej-Oc-gl4">
                         <rect key="frame" x="14" y="13" width="96" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="84" id="HVx-6F-pNb"/>
+                        </constraints>
                         <buttonCell key="cell" type="push" title="Add Task" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="WJQ-oM-FBv">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -104,13 +83,29 @@
                             <action selector="addTasks:" target="-2" id="qUL-58-zVt"/>
                         </connections>
                     </button>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="giu-BK-n6f">
+                        <rect key="frame" x="413" y="13" width="80" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="68" id="ie4-cx-g9B"/>
+                        </constraints>
+                        <buttonCell key="cell" type="push" title="Delete" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="M7v-bp-EZY">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="deleteTasks:" target="-2" id="q0s-7h-N0A"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="giu-BK-n6f" firstAttribute="leading" secondItem="zej-Oc-gl4" secondAttribute="trailing" constant="315" id="0BH-Im-tjj"/>
                     <constraint firstAttribute="trailing" secondItem="gJl-yq-s0R" secondAttribute="trailing" constant="20" id="0x4-sn-H9S"/>
+                    <constraint firstAttribute="bottom" secondItem="giu-BK-n6f" secondAttribute="bottom" constant="20" id="84A-yD-QEl"/>
                     <constraint firstItem="gJl-yq-s0R" firstAttribute="top" secondItem="gIp-Ho-8D9" secondAttribute="top" constant="14" id="8K4-ZL-HMU"/>
+                    <constraint firstItem="giu-BK-n6f" firstAttribute="top" secondItem="gJl-yq-s0R" secondAttribute="bottom" constant="11" id="Ant-FE-OiU"/>
                     <constraint firstItem="gJl-yq-s0R" firstAttribute="leading" secondItem="zej-Oc-gl4" secondAttribute="leading" id="Iqe-7D-8nY"/>
+                    <constraint firstAttribute="trailing" secondItem="giu-BK-n6f" secondAttribute="trailing" constant="20" id="LQK-Lt-HIW"/>
                     <constraint firstItem="zej-Oc-gl4" firstAttribute="top" secondItem="gJl-yq-s0R" secondAttribute="bottom" constant="11" id="Y4J-Yw-wbx"/>
-                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zej-Oc-gl4" secondAttribute="trailing" constant="20" symbolic="YES" id="aNF-d0-Py6"/>
                     <constraint firstItem="gJl-yq-s0R" firstAttribute="leading" secondItem="gIp-Ho-8D9" secondAttribute="leading" constant="20" id="kMg-yh-tvi"/>
                     <constraint firstAttribute="bottom" secondItem="gJl-yq-s0R" secondAttribute="bottom" constant="52" id="lfR-pL-IBP"/>
                 </constraints>
