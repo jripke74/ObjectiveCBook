@@ -14,6 +14,10 @@
 
 @implementation Document
 
+#pragma mark - NSDocument Overrides
+
+
+
 - (instancetype)init {
     self = [super init];
     if (self) {
@@ -50,5 +54,8 @@
     return YES;
 }
 
+- (void)addTasks:(id)sender {
+    NSLog(@"Add Task button clicked!");
+}
 
 @end

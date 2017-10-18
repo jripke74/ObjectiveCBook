@@ -8,6 +8,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="Document">
             <connections>
+                <outlet property="taskTable" destination="teU-yh-pmp" id="BpT-ab-TDE"/>
                 <outlet property="window" destination="xOd-HO-29H" id="JIz-fz-R2o"/>
             </connections>
         </customObject>
@@ -23,13 +24,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="507" height="413"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zej-Oc-gl4">
-                        <rect key="frame" x="14" y="13" width="96" height="32"/>
-                        <buttonCell key="cell" type="push" title="Add Task" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="WJQ-oM-FBv">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                    </button>
                     <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJl-yq-s0R">
                         <rect key="frame" x="20" y="52" width="467" height="347"/>
                         <clipView key="contentView" id="AH3-Si-rS3">
@@ -60,9 +54,8 @@
                                                     <rect key="frame" x="1" y="1" width="462" height="17"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
-                                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pcd-BH-XzD">
+                                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="pcd-BH-XzD">
                                                             <rect key="frame" x="0.0" y="0.0" width="462" height="17"/>
-                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="hGF-r4-7j1">
                                                                 <font key="font" metaFont="system"/>
                                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -70,6 +63,11 @@
                                                             </textFieldCell>
                                                         </textField>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="pcd-BH-XzD" firstAttribute="centerX" secondItem="aUd-Cb-RQq" secondAttribute="centerX" id="4Ge-bX-PmG"/>
+                                                        <constraint firstItem="pcd-BH-XzD" firstAttribute="leading" secondItem="aUd-Cb-RQq" secondAttribute="leading" constant="2" id="f2g-m5-kd3"/>
+                                                        <constraint firstItem="pcd-BH-XzD" firstAttribute="centerY" secondItem="aUd-Cb-RQq" secondAttribute="centerY" id="nRE-if-5Le"/>
+                                                    </constraints>
                                                     <connections>
                                                         <outlet property="textField" destination="pcd-BH-XzD" id="bdx-e2-lul"/>
                                                     </connections>
@@ -93,14 +91,25 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </tableHeaderView>
                     </scrollView>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zej-Oc-gl4">
+                        <rect key="frame" x="14" y="13" width="96" height="32"/>
+                        <buttonCell key="cell" type="push" title="Add Task" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="WJQ-oM-FBv">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="addTasks:" target="-2" id="qUL-58-zVt"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="gJl-yq-s0R" secondAttribute="trailing" constant="20" id="0x4-sn-H9S"/>
                     <constraint firstItem="gJl-yq-s0R" firstAttribute="top" secondItem="gIp-Ho-8D9" secondAttribute="top" constant="14" id="8K4-ZL-HMU"/>
-                    <constraint firstAttribute="bottom" secondItem="zej-Oc-gl4" secondAttribute="bottom" constant="20" id="BKS-4Y-tpq"/>
-                    <constraint firstItem="zej-Oc-gl4" firstAttribute="top" secondItem="gJl-yq-s0R" secondAttribute="bottom" constant="11" id="Ch6-ZY-79K"/>
-                    <constraint firstItem="zej-Oc-gl4" firstAttribute="leading" secondItem="gIp-Ho-8D9" secondAttribute="leading" constant="20" id="I39-VA-foc"/>
+                    <constraint firstItem="gJl-yq-s0R" firstAttribute="leading" secondItem="zej-Oc-gl4" secondAttribute="leading" id="Iqe-7D-8nY"/>
+                    <constraint firstItem="zej-Oc-gl4" firstAttribute="top" secondItem="gJl-yq-s0R" secondAttribute="bottom" constant="11" id="Y4J-Yw-wbx"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zej-Oc-gl4" secondAttribute="trailing" constant="20" symbolic="YES" id="aNF-d0-Py6"/>
                     <constraint firstItem="gJl-yq-s0R" firstAttribute="leading" secondItem="gIp-Ho-8D9" secondAttribute="leading" constant="20" id="kMg-yh-tvi"/>
+                    <constraint firstAttribute="bottom" secondItem="gJl-yq-s0R" secondAttribute="bottom" constant="52" id="lfR-pL-IBP"/>
                 </constraints>
             </view>
             <connections>
