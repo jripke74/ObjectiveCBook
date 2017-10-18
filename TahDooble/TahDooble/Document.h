@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface Document : NSDocument
+@interface Document : NSDocument <NSTableViewDataSource>
 
 @property (nonatomic) NSMutableArray *tasks;
 @property (nonatomic) IBOutlet NSTableView *taskTable;
@@ -16,4 +16,3 @@
 - (IBAction)addTasks:(id)sender;
 
 @end
-
