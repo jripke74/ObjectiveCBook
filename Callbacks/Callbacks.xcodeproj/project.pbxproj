@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		892579581F7041E2008F0327 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 892579571F7041E2008F0327 /* main.m */; };
 		892579601F704DDF008F0327 /* BNRLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 8925795F1F704DDF008F0327 /* BNRLogger.m */; };
+		89D409BF1F9E51D300D61383 /* Observer.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D409BE1F9E51D300D61383 /* Observer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		892579571F7041E2008F0327 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8925795E1F704DDF008F0327 /* BNRLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRLogger.h; sourceTree = "<group>"; };
 		8925795F1F704DDF008F0327 /* BNRLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRLogger.m; sourceTree = "<group>"; };
+		89D409BD1F9E51D300D61383 /* Observer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Observer.h; sourceTree = "<group>"; };
+		89D409BE1F9E51D300D61383 /* Observer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Observer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 				892579571F7041E2008F0327 /* main.m */,
 				8925795E1F704DDF008F0327 /* BNRLogger.h */,
 				8925795F1F704DDF008F0327 /* BNRLogger.m */,
+				89D409BD1F9E51D300D61383 /* Observer.h */,
+				89D409BE1F9E51D300D61383 /* Observer.m */,
 			);
 			path = Callbacks;
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89D409BF1F9E51D300D61383 /* Observer.m in Sources */,
 				892579601F704DDF008F0327 /* BNRLogger.m in Sources */,
 				892579581F7041E2008F0327 /* main.m in Sources */,
 			);
@@ -257,6 +263,7 @@
 				8925795D1F7041E2008F0327 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

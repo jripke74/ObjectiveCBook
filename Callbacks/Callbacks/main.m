@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "BNRLogger.h"
+#import "Observer.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -20,7 +21,8 @@ int main(int argc, const char * argv[]) {
                                                                               delegate:logger startImmediately: YES];
         __unused NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:2.0 target:logger selector:@selector(updateLastTime:)
                                                                                     userInfo: nil repeats: YES];
-        
+        __unused Observer *observer = [[Observer alloc] init];
+        [logger addObserver:observer forKeyPath:@"lastTimeString" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
         [[NSRunLoop currentRunLoop] run];
     }
     return EXIT_SUCCESS;
