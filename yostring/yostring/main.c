@@ -16,27 +16,10 @@ int main (int argc, const char * argv[]) {
         printf("%x is %c\n", x, x);
         x++;
     }
-    // Get a pointer to 5 bytes of memory on the heap
-    char *start = malloc(5);
     
-    // Put 'L' in the first byte
-    start[0] = 'L';
-    
-    // Put 'o' in the second byte
-    start[1] = 'o';
-    
-    // Put 'v' in the third byte
-    *(start + 2) = 'v';
-    
-    // Put 'e' in the fourth byte
-    *(start + 3) = 'e';
-    
-    // Put zero in the fifth byte
-    *(start + 5) = '\0';
-    
+    const char *start = "Love";
     printf("%s has %zu characters\n", start, strlen(start));
     printf("The second letter is %c\n", start[1]);
-    free(start);
     start = NULL;
     
     return 0;
