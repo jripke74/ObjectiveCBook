@@ -17,10 +17,7 @@ float averageFloats(float *data, int dataCount) {
 }
 
 int main(int argc, const char * argv[]) {
-    float gradeBook[3];
-    gradeBook[0] = 60.2;
-    gradeBook[1] = 94.5;
-    gradeBook[2] = 81.1;
+    float gradeBook[] = {60.2, 94.5, 81.1};
     
     float average = averageFloats(gradeBook, 3);
     
