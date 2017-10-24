@@ -17,7 +17,7 @@ int main (int argc, const char * argv[]) {
         x++;
     }
     
-    const char *start = "Love";
+    const char *start = "A backslash after two newlines and a tab:\n\n\t\\";
     printf("%s has %zu characters\n", start, strlen(start));
     printf("The second letter is %c\n", start[1]);
     start = NULL;
