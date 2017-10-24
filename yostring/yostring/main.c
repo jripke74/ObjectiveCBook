@@ -9,7 +9,7 @@
 #include <stdio.h>
 
 int main (int argc, const char * argv[]) {
-    char x = 0x21; // '!'
+    char x = '!'; // '!'
     while (x <= 0x7e) { // '~'
         printf("%x is %c\n", x, x);
         x++;
